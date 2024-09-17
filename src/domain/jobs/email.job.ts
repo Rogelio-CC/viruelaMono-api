@@ -32,7 +32,7 @@ export const emailJob = () => {
                             subject: `Detalles de la persona enferma: Género de la persona: ${monkeyPox.genre}, Edad de la persona: ${monkeyPox.age} `,
                             htmlBody: htmlBody
                         });
-                        console.log(`Email enviado para el incident con Id: ${monkeyPox._id}`)
+                        console.log(`Email enviado para el caso con Id: ${monkeyPox._id}`)
                         let updateIncident = {
                             lat: monkeyPox.lat,
                             lng: monkeyPox.lng,
@@ -43,7 +43,7 @@ export const emailJob = () => {
                         };
     
                         await monkeyPoxModel.findByIdAndUpdate(monkeyPox._id, updateIncident);
-                        console.log(`Incidente actualizado para el Id: ${monkeyPox._id}`);
+                        console.log(`Caso actualizado para el Id: ${monkeyPox._id}`);
                         
                     } catch (error) {
                         console.error("Error al procesar el caso")

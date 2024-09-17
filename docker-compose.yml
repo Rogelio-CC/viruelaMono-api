@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   viruela_mono-api:
-    image: rogercc28/viruela_mono-api
+    image: rogercc28/viruela_mono-api:latest
     container_name: viruela_mono_api
     ports:
       - "3000:3000"
