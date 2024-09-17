@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  viruela_mono-api:
+    image: rogercc28/viruela_mono-api
+    container_name: viruela_mono_api
+    ports:
+      - "3000:3000"
+    environment: 
+      MONGO_URL: ${MONGO_URL_DOCKER}
+      PORT: ${PORT}
+      MAIL_SECRET_KEY: ${MAIL_SECRET_KEY}
+      MAIL_SERVICE: ${MAIL_SERVICE}
+      MAIL_USER: ${MAIL_USER}
+      MAPBOX_ACCESS_TOKEN: ${MAPBOX_ACCESS_TOKEN}
+    depends_on:
+      - mongo
+
+
+  mongo: 
+    image: mongo
+    container_name: mongo_monkey_pox
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports: 
+      - "27017:27017"
+    volumes:
+      - mongodb_volume:/data/db
+
+volumes:
+  mongodb_volume:
