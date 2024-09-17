@@ -7,12 +7,12 @@ services:
     ports:
       - "3000:3000"
     environment: 
-      MONGO_URL: ${MONGO_URL_DOCKER}
-      PORT: ${PORT}
-      MAIL_SECRET_KEY: ${MAIL_SECRET_KEY}
-      MAIL_SERVICE: ${MAIL_SERVICE}
-      MAIL_USER: ${MAIL_USER}
-      MAPBOX_ACCESS_TOKEN: ${MAPBOX_ACCESS_TOKEN}
+      MONGO_URL: mongodb://root:example@mongo/
+      PORT: 3000
+      MAIL_SECRET_KEY: zasoudkvnrzdwulm 
+      MAIL_SERVICE: gmail
+      MAIL_USER: rogelioceballos218@gmail.com
+      MAPBOX_ACCESS_TOKEN: pk.eyJ1IjoianVhbmZyOTciLCJhIjoiY2x4cnhqZGZpMWUzdTJrb2Qxd2k5Z3huYSJ9.Kp99lB1snn3xzzi26jKy4w
     depends_on:
       - mongo
 
