@@ -2,6 +2,7 @@ import cron from 'node-cron'
 import { monkeyPoxModel } from '../../data/models/monkeypox.model'
 import { EmailService } from '../services/email.service';
 import { generatemonkeyPoxEmailTemplate } from '../templates/email.template';
+import { envs } from '../../config/envs.plugin';
 
 const emailService = new EmailService();
 
@@ -28,7 +29,7 @@ export const emailJob = () => {
                             monkeyPox.age
                         )
                         await emailService.sendEmail({
-                            to: "rogelioceballos218@gmail.com",
+                            to: envs.MAIL_USER ?? '',
                             subject: `Detalles de la persona enferma: Género de la persona: ${monkeyPox.genre}, Edad de la persona: ${monkeyPox.age} `,
                             htmlBody: htmlBody
                         });
