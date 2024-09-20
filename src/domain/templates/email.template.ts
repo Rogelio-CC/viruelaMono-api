@@ -59,7 +59,7 @@ export function generatemonkeyPoxEmailTemplate(lat: number, lng: number, genre: 
     <body>
         <div class="container">
             <div class="header">
-                <h1>Detalles del Incidente</h1>
+                <h1>Detalles del caso</h1>
             </div>
             <div class="content">
                 <p><strong>Descripción de la persona enferma</strong></p>
