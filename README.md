@@ -1,4 +1,4 @@
-# Proyecto Viruela del Mono - API REST
+# Proyecto Viruela del Mono
 
 Este proyecto es una API REST escalable para gestionar los casos de la Viruela del Mono en México. Utiliza Node.js con TypeScript, MongoDB, y está contenedorizado con Docker.
 
